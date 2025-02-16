@@ -32,4 +32,9 @@ class TaskViewModel extends ChangeNotifier {
     await _taskService.toggleIsComplete(id: id);
     await _loadData();
   }
+
+  Future<void> remove({required int id}) async {
+    await _taskService.remove(id: id);
+    await _loadData();
+  }
 }

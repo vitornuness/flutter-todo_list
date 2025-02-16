@@ -24,7 +24,6 @@ class HomeView extends StatelessWidget {
               child: Column(
                 children: [
                   const TaskForm(),
-                  const Divider(),
                   const Expanded(child: TaskList()),
                 ],
               ),

@@ -39,6 +39,10 @@ class TaskRepository {
     return taskRecovered;
   }
 
+  Future<void> remove(int id) async {
+    _tasks.removeWhere((task) => task.id == id);
+  }
+
   int _getNextId() {
     return _tasks.isNotEmpty ? _tasks.last.id + 1 : 1;
   }

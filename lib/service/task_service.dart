@@ -21,4 +21,8 @@ class TaskService {
     task.isComplete = !task.isComplete;
     return await _taskRepository.update(id, task);
   }
+
+  Future<void> remove({required int id}) async {
+    await _taskRepository.remove(id);
+  }
 }
